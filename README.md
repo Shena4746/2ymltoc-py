@@ -5,7 +5,7 @@
 An interactive command line tool to convert ToC text file into yaml file suitable for [PDFToC](https://github.com/osanshouo/pdftoc-rs).
 It detects typical ToC structures, such as "Part X", "Chapter Y" and "Section Z", and produces yaml file that represents the structure.
 
-### **caution**
+### **Caution**
 
 The output yaml file might be invalid for PDFToC.
 This is because it is just a simple convertor and not a tool for correcting defects in an original text file, such as missing page numbers, invalid use of reserved characters. To this end, it is recommended to inspect it by appropriate tools.
