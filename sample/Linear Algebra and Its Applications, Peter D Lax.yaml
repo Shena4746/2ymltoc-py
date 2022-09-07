@@ -1,0 +1,206 @@
+- Contents
+- Preface xi
+- Preface to the First Edition xiii
+- 1. Fundamentals 1
+- 
+  - Linear Space, Isomorphism 1
+  - Subspace 4
+  - Linear Dependence 4
+  - Basis, Dimension 5
+  - Quotient Space 8
+- 2. Duality 13
+- 
+  - Linear Functions 13
+  - Dual of a Linear Space 14
+  - Annihilator 15
+  - Codimension 16
+  - Quadrature Formula 17
+- 3. Linear Mappings 19
+- 
+  - Domain and Target Space 19
+  - Nullspace and Range 20
+  - Fundamental Theorem 20
+  - Underdetermined Linear Systems 21
+  - Interpolation 22
+  - Difference Equations 23
+  - Algebra of Linear Mappings 24
+  - Dimension of Nullspace and Range 27
+  - Transposition 26
+  - Similarity 29
+  - Projections 30
+- 4. Matrices 32
+- 
+  - Rows and Columns 33
+  - Matrix Multiplication 35
+  - Transposition 36
+  - Rank 37
+  - Gaussian Elimination 39
+- 5. Determinant and Trace 44
+- 
+  - Ordered Simplices 44
+  - Signed Volume, Determinant 45
+  - Permutation Group 46
+  - Formula for Determinant 48
+  - Multiplicative Property 49
+  - Laplace Expansion 52
+  - Cramer’s Rule 54
+  - Trace 55
+- 6. Spectral Theory 58
+- 
+  - Iteration of Linear Maps 59
+  - Eigenvalues, Eigenvectors 59
+  - Fibonacci Sequence 62
+  - Characteristic Polynomial 63
+  - Trace and Determinant Revisited 65
+  - Spectral Mapping Theorem 66
+  - Cayley—Hamilton Theorem 67
+  - Generalized Eigenvectors 69
+  - Spectral Theorem 70
+  - Minimal Polynomial 72
+  - When Are Two Matrices Similar 73
+  - Commuting Maps 74
+- 7. Euclidean Structure 77
+- 
+  - Scalar Product, Distance 719
+  - Schwarg Inequality 79
+  - Orthonormal Basis 80
+  - Gram—Schmidt 81
+  - Orthogonal Complement 82
+  - Orthogonal Projection 83
+  - Adjoint 84
+  - Overdetermined Systems 86
+  - Isometry 87
+  - The Orthogonal Group 89
+  - Norm of a Linear Map 89
+  - Completeness Local Compactness 92
+  - Complex Euclidean Structure 95
+  - Spectral Radius 97
+  - Hilbert-Schmidt Norm 98
+  - Cross Product 99
+- 8. Spectral Theory of Self-Adjoint Mappings 101
+- 
+  - Quadratic Forms 102
+  - Law of Inertia 103
+  - Spectral Resolution 105
+  - Commuting Maps ae Anti-Self-Adjoint Maps 112
+  - Normal Maps 112
+  - Rayleigh Quotient 114
+  - Minmax Principle 116
+  - Norm and Eigenvalues 119
+- 9. Calculus of Vector- and Matrix-Valued Functions 121
+- 
+  - Convergence in Norm 121
+  - Rules of Differentiation 122
+  - Derivative of det A(t) 126
+  - Matrix Exponential 128
+  - Simple Eigenvalues 129
+  - Multiple Eigenvalues 135
+  - Rellich’s Theorem 140
+  - Avoidance of Crossing 140
+- 10. Matrix Inequalities 143
+- 
+  - Positive Self-Adjoint Matrices 143
+  - Monotone Matrix Functions 151
+  - Gram Matrices 152
+  - Schur’s Theorem 153
+  - The Determinant of Positive Matrices 154
+  - Integral Formula for Determinants 157
+  - Eigenvalues 160
+  - Separation of Eigenvalues 161
+  - Wielandt—Hoffman Theorem 164
+  - Smallest and Largest Eigenvalue 166
+  - Matrices with Positive Self-Adjoint Part 167
+  - Polar Decomposition 169
+  - Singular Values 170
+  - Singular Value Decomposition 170
+- 11. Kinematics and Dynamics 172
+- 
+  - Axis and Angle of Rotation 172
+  - Rigid Motion 173
+  - Angular Velocity Vector 176
+  - Fluid Flow 177
+  - Curl and Divergence 179
+  - Small Vibrations 180
+  - Conservation of Energy 182
+  - Frequencies and Normal Modes 184
+- 12. Convexity 187
+- 
+  - Convex Sets 187
+  - Gauge Function 188
+  - Hahn—Banach Theorem 191
+  - Support Function 193
+  - Carathéodory’s Theorem 195
+  - K6nig—-Birkhoff Theorem 198
+  - Helly’s Theorem 199
+- 13. The Duality Theorem 202
+- 
+  - Farkas—Minkowski Theorem 203
+  - Duality Theorem 206
+  - Economics Interpretation 208
+  - Minmax Theorem 210
+- 14. Normed Linear Spaces 214
+- 
+  - Norm 214
+  - lp Norms 215
+  - Equivalence of Norms 217
+  - Completeness 219
+  - Local Compactness 219
+  - Theorem of F. Riesz 219
+  - Dual Norm 222
+  - Distance from Subspace 223
+  - Normed Quotient Space 224
+  - Complex Normed Spaces 226
+  - Complex Hahn-Banach Theorem 226
+  - Characterization of Euclidean Spaces 227
+- 15. Linear Mappings Between Normed Linear Spaces 229
+- 
+  - Norm of a Mapping 230
+  - Norm of Transpose 231
+  - Normed Algebra of Maps 232
+  - Invertible Maps 233
+  - Spectral Radius 236
+- 16. Positive Matrices 237
+- 
+  - Perron’s Theorem 237
+  - Stochastic Matrices 240
+  - Frobenius’ Theorem 243
+- 17. How to Solve Systems of Linear Equations 246
+- 
+  - History 246
+  - Condition Number 248
+  - Tterative Methods 248
+  - Steepest Descent 249
+  - Chebychev Iteration 252
+  - Three-term Chebychev Iteration 255
+  - Optimal Three-Term Recursion Relation 256
+  - Rate of Convergence 261
+- 18. How to Calculate the Eigenvalues of Self-Adjoint Matrices 262
+- 
+  - QR Factorization 262
+  - Using the QR Factorization to Solve Systems of Equations 263
+  - The QR Algorithm for Finding Eigenvalues 263
+  - Householder Reflection for QR Factorization 266
+  - Tridiagonal Form 267
+  - Analogy of QR Algorithm and Toda Flow 269
+  - Moser’s Theorem 273
+  - More General Flows 276
+- 19. Solutions 278
+- 
+  - Bibliography 300
+  - Appendix 1. Special Determinants 302
+  - Appendix 2. The Pfaffian 305
+  - Appendix 3. Symplectic Matrices 308
+  - Appendix 4. Tensor Product 313
+  - Appendix 5. Lattices 317
+  - Appendix 6. Fast Matrix Multiplication 320
+  - Appendix 7. Gershgorin’s Theorem 323
+  - Appendix 8. The Multiplicity of Eigenvalues 325
+  - Appendix 9. The Fast Fourier Transform 328
+  - Appendix 10. The Spectral Radius 334
+  - Appendix 11. The Lorentz Group 342
+  - Appendix 12. Compactness of the Unit Ball 352
+  - Appendix 13. A Characterization of Commutators 355
+  - Appendix 14. Liapunov’s Theorem 357
+  - Appendix 15. The Jordan Canonical Form 363
+  - Appendix 16. Numerical Range 367
+- Index 373

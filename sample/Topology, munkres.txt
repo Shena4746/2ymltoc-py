@@ -1,0 +1,112 @@
+Contents
+Prefac XI
+A Note to the Reader XV
+Part I GENERAL TOPOLOGY
+Chapter 1 Set Theory and Logic 3
+1 Fundamental Concepts 4
+2 Functions
+3 Relations 1
+4 The Integers and the Real Numbers 30
+5 Cartesian Products 36
+6 Finite Sets
+7 Countable and Uncountable Sets 44
+*8 The Principle of Recursive Definition 52
+9 Infinite Sets and the Axiom of Choic
+10 Well-Ordered Sets 62
+*11 The Maximum Principl 68
+*Supplementary Exercises: Well-Ordering 72
+Chapter 2 Topological Spaces and Continuous Functions 75
+12 Topological Spaces
+13 Basis fora Topology 78
+14 The Order Topology 84
+15 The Product Topology on X x Y 86
+16 The Subspace Topology 88
+17 Closed Sets and Limit Points 92
+18 Continuous Functions 102
+19 The Product Topology 112
+20 The Metric Topology
+21 The Metric Topology (continued) 129
+*22 The Quotient Topology 136
+*Supplementary Exercises: Topological Groups 145
+Chapter 3 Connectedness and Compactness 147
+23 Connected Spaces 148
+24 Connected Subspaces of the Real Lin 153
+*25 Components and Local Connectedness 159
+26 Compact Spaces 163
+27 Compact Subspaces of the Real Lin 172
+28 Limit Point Compactness 178
+29 Local Compactness 182
+“Supplementary Exercises: Nets 187
+Chapter 4 Countability and Separation Axioms 189
+30 The Countability Axioms 190
+31 The Separation Axioms 195
+32 Normal Spaces 200
+33 The Urysohn Lemma 207
+34 The Urysohn Metrization Theorem 214
+*35 The Tietze Extension Theorem 219
+*36 Imbeddings of Manifolds 224
+*Supplementary Exercises: Review of the Basics 228
+Chapter5 The Tychonoff Theorem 230
+37 The Tychonoff Theorem 230
+38 The Stone-Cech Compactification 237
+Chapter6 Metrization Theorems and Paracompactness 243
+39 Local Finiteness 244
+40 The Nagata-Smimov Metrization Theorem 248
+4] Paracompactmess 252
+42 The Smimov Metrization Theorem 261
+Chapter 7 Complete Metric Spaces and Function Spaces 263
+43 Complete Metric Spaces 264
+*44 A Space-Filling Curv 271
+45 Compactness in Metric Spaces 275
+46 Pointwise and Compact Convergenc 281
+47 Ascolis Theorem 290
+Chapter 8 Baire Spaces and Dimension Theory 294
+48 Baire Spaces 295
+*49 A Nowhere-Differentiable Function 300
+50 Introduction to Dimension Theory 304
+*Supplementary Exercises: Locally Euclidean Spaces 316
+Part I] ALGEBRAIC TOPOLOGY
+Chapter9 The Fundamental Group 321
+51 Homotopy of Paths 322
+52 The Fundamental Group 330
+53 Covering Spaces 335
+54 The Fundamental Group of the Circl 341
+55 Retractions and Fixed Points 348
+*56 The Fundamental Theorem of Algebra 353
+*57 The Borsuk-Ulam Theorem 356
+58 Deformation Retracts and Homotopy Typ 359
+59 The Fundamental Group of S" 368
+60 Fundamental Groups of Some Surfaces 49370
+Chapter 10 Separation Theorems in the Plan 376
+61 The Jordan Separation Theorem 376
+*62 Invariance of Domain
+63 The Jordan Curve Theorem 385
+64 Imbedding Graphs in the Plan 394
+65 The Winding Number of a Simple Closed Curv 398
+66 The Cauchy Integral Formula 403
+Chapter 11 The Seifert-van Kampen Theorem 407
+67 Direct Sums of Abelian Groups 407
+68 Free Productsof Groups 412
+69 Free Groups 421
+70 The Seifert-van Kampen Theorem 426
+71 The Fundamental Group of a Wedge of Circles 434
+72 Adjoining a Two-cell 438
+73 The Fundamental Groups of the Torus and the Dunce Cap 442
+Chapter 12 Classification of Surfaces 446
+74 Fundamental Groups of Surfaces 446
+75 Homology of Surfaces 454
+76 Cutting and Pasting 457
+77 The Classification Theorem 462
+78 Constructing Compact Surfaces 1
+Chapter 13 Classification of Covering Spaces 477
+79 Equivalence of Covering Spaces 47
+80 The Universal Covering Spac 484
+*81 Covering Transformations 487
+82 Existence of Covering Spaces 494
+*Supplementary Exercises: Topological Properties anda 499
+Chapter 14 Applications to Group Theory
+83 Covering Spaces of a Graph 501
+84 The Fundamental Group ofa Graph 506
+85 Subgroups of Free Groups 543
+Bibliography
+Index
