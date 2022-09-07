@@ -79,7 +79,7 @@ python /path/to/scr/ymltoc.py --help
 5 | (Symbol?)X.Y.Z, appears 95 times
 ```
 
-Enter `4` if you choose `chapter X`, which appears 19 times in the input text file.
+Enter `4` to choose `chapter X`, which is reported to appear 19 times across the input text file.
 Enter `e` to exit from this pattern selection.
 If you choose a pattern, then you are asked to specify its depth (0 is the top level).
 
@@ -108,7 +108,7 @@ Enter `e` after you finish selecting all necessary patterns.
 
 ## Specify where the back matter starts (Optional)
 
-This option is useful if your ToC text file has a back matter and if you would like to set it as depth=0.
+This option is useful when your ToC text file has a back matter and when you would like to set it as depth=0.
 
 ```txt
 0 | Appendix II: Category Theory 911
@@ -116,5 +116,5 @@ This option is useful if your ToC text file has a back matter and if you would l
 2 | Index 919
 ```
 
-enter `1` if `References` and `Index` should be treated as the back matter.
+Enter `1` if `References` and `Index` should be treated as the back matter.
 This operation makes all subsequent lines back matter.
