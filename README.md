@@ -79,7 +79,7 @@ python /path/to/scr/ymltoc.py --help
 5 | (Symbol?)X.Y.Z, appears 95 times
 ```
 
-Enter `3` if you choose `chapter X`, which appears 19 times in the input text file.
+Enter `4` if you choose `chapter X`, which appears 19 times in the input text file.
 Enter `e` to exit from this pattern selection.
 If you choose a pattern, then you are asked to specify its depth (0 is the top level).
 
