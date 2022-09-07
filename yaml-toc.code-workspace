@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "yamltoc",
+			"path": "."
+		}
+	],
+	"settings": {
+		"python.languageServer": "Pylance"
+	}
+}
