@@ -94,7 +94,7 @@ References 168
 LOCAL THEORY 171
 7.2 Gateaux and Fréchet Differentials 171
 7.3 Fréchet Derivatives 175
-74 Extrema 177
+7.4 Extrema 177
 *7.5 Euler-Lagrange Equations 179
 *7.6 Problems with Variable End Points 183
 7.7 Problems with Constraints 185
