@@ -2,7 +2,7 @@ from pathlib import Path
 from typing import Optional
 
 from Formatter import Formatter
-from Header_Detecter import Header_Detecter
+from Header_Detecter import Header_Detecter, Header_Detecter_ja
 from Header_Filler import Filler
 from Text_Lines import Text_Lines
 
@@ -25,7 +25,7 @@ def to_yml(text_file: Path | str, dir_out: Optional[str | Path], ja: bool = Fals
     dir_out = file.parent if dir_out is None else Path(dir_out)
     with open(str(text_file)) as f:
         tls = Text_Lines(f.read())
-        detecter = Header_Detecter(lines=tls)
+        detecter = Header_Detecter_ja(lines=tls) if ja else Header_Detecter(lines=tls)
         headers = detecter.choose_headers()
         filler = Filler(tls)
         tls = filler.fill(headers)

@@ -35,15 +35,17 @@ class Header_Detecter:
     def __init__(
         self,
         lines: Text_Lines,
-        digits: str = "[\\d(ixv)]",
+        digits: str = "ixv\\p{Nl}\\d",
         key_single: list[str] = ["part", "chapter", "section", "appendix"],
         key_paired: list[tuple[str, str]] = [],
         key_no_digit: list[str] = ["appendix", "preliminaries", "preliminary"],
+        seps: list[str] = [".", "-"],
     ) -> None:
         self.mediator = Mediator(public_options=[Option.Exit.value], private_options=[Option.Digit.value])
         self.printer = Texts_Printer()
         self.lines: Text_Lines = lines
         self.digits: str = digits
+        self.seps: list[str] = seps
         self.key_single: list[str] = key_single
         self.key_paired: list[tuple[str, str]] = key_paired
         self.key_no_digit: list[str] = key_no_digit
@@ -51,32 +53,55 @@ class Header_Detecter:
             self._generate_single_patterns()
             + self._generate_paired_patterns()
             + self._generate_no_digit_patterns()
-            + self._generate_pure_digit_patterns()
+            + self._generate_multi_digit_patterns()
             + self._generate_mono_digit_patterns()
         )
 
+    def _generate_header_raw_patterns(self) -> list[str]:
+        return ["^", f"^[^{self.digits}\\s]" + "{1,3}"]
+
+    def _generate_header_samples(self) -> list[str]:
+        return ["" if raw_pat == "^" else "(Symbol)" for raw_pat in self._generate_header_raw_patterns()]
+
+    def _generate_mono_digit_seps(self) -> list[str]:
+        return list(set(self.seps + [""]))
+
     def _generate_single_patterns(self) -> list[Pattern]:
-        return [regex.compile(f"^{key}\\s?{self.digits}", regex.IGNORECASE) for key in self.key_single]
+        return [regex.compile(f"^{key}\\s?[{self.digits}]", regex.IGNORECASE) for key in self.key_single]
 
     def _generate_paired_patterns(self) -> list[Pattern]:
         return [
-            regex.compile(f"^{key1}\\s?{self.digits}\\s?{key2}", regex.IGNORECASE) for key1, key2 in self.key_paired
+            regex.compile(f"^{key1}\\s?[{self.digits}]+\\s?{key2}", regex.IGNORECASE) for key1, key2 in self.key_paired
         ]
 
     def _generate_no_digit_patterns(self) -> list[Pattern]:
         return [regex.compile(f"^\\S*?\\s?{key}", regex.IGNORECASE) for key in self.key_no_digit]
 
-    def _generate_pure_digit_patterns(self) -> list[Pattern]:
-        return [regex.compile("^[^\\d\\s]*?(\\d+\\.?)+")]
+    def _generate_multi_digit_patterns(self) -> list[Pattern]:
+        return [
+            regex.compile(f"{header_raw_pat}[{self.digits}]+(?={regex.escape(sep)}[{self.digits}])")
+            for sep in self.seps
+            for header_raw_pat in self._generate_header_raw_patterns()
+        ]
 
     def _generate_mono_digit_patterns(self) -> list[Pattern]:
-        return [regex.compile("^[^\\d\\s]*?\\d+\\.?\\s")]
+        return [
+            regex.compile(f"{header_raw_pat}[{self.digits}]+{regex.escape(sep)}(?=\\s)")
+            for header_raw_pat in self._generate_header_raw_patterns()
+            for sep in self._generate_mono_digit_seps()
+        ]
 
-    def _generate_pure_digit_samples(self) -> list[str]:
-        return ["(Symbol?)X.Y.Z"]
+    # these samples are used for display when the program asks user to choose patterns
+    def _generate_multi_digit_samples(self) -> list[str]:
+        seps: list[str] = [regex.escape(sep) for sep in self.seps]
+        return [f"{sample}X{sep}Y{sep}Z" for sep in seps for sample in self._generate_header_samples()]
 
     def _generate_mono_digit_samples(self) -> list[str]:
-        return ["(Symbol?)X"]
+        return [
+            f"{sample}X{regex.escape(sep)}"
+            for sample in self._generate_header_samples()
+            for sep in self._generate_mono_digit_seps()
+        ]
 
     def _generate_single_samples(self) -> list[str]:
         return [f"{key} X" for key in self.key_single]
@@ -93,12 +118,12 @@ class Header_Detecter:
                 self._generate_single_patterns()
                 + self._generate_paired_patterns()
                 + self._generate_no_digit_patterns()
-                + self._generate_pure_digit_patterns()
+                + self._generate_multi_digit_patterns()
                 + self._generate_mono_digit_patterns(),
                 self._generate_single_samples()
                 + self._generate_paired_samples()
                 + self._generate_no_digit_samples()
-                + self._generate_pure_digit_samples()
+                + self._generate_multi_digit_samples()
                 + self._generate_mono_digit_samples(),
             )
         )
@@ -142,7 +167,7 @@ class Header_Detecter:
                 break
             # show candidates
             self._show_headers(headers=candidates)
-            user_input, _ = self.mediator.get_user_input(default_value="0", domain=range(len(candidates) + 1))
+            user_input, _ = self.mediator.get_user_input(default_value="0", domain=range(len(candidates)))
             choice = self.mediator.interpret(user_input=user_input)
             match choice.option:
                 case Option.Exit:
@@ -238,3 +263,15 @@ class Header_Detecter:
         return [Header(pat=regex.compile(f"^{line.text}"), depth=0, idx=line.idx) for line in self.lines[pos_idx:]]
         # header.pat will not be used since header.idx identifies exactly where the depth should be applied.
         # the pat is provided just for understanding my intension and for error handling.
+
+
+class Header_Detecter_ja(Header_Detecter):
+    def __init__(
+        self,
+        lines: Text_Lines,
+        digits: str = "ixv\\p{N}〇一二三四五六七八九十",
+        key_single: list[str] = ["part", "chapter", "section", "appendix", "付録"],
+        key_paired: list[tuple[str, str]] = [("第", "部"), ("第", "章"), ("第", "節")],
+        key_no_digit: list[str] = ["appendix", "preliminaries", "preliminary", "付録"],
+    ) -> None:
+        super().__init__(lines, digits, key_single, key_paired, key_no_digit)
