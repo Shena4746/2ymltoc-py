@@ -83,7 +83,7 @@ class Mediator:
         elif inp in self._public_options:
             return inp, flag_default
         else:
-            print(f"invalid string. use {self._public_options}.")
+            print(f"invalid string. Use Integer or {self._public_options}.")
         # otherwise
         return None, flag_default
 
