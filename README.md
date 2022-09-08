@@ -84,12 +84,16 @@ Enter `e` to exit from this pattern selection.
 If you choose a pattern, then you are asked to specify its depth (0 is the top level).
 
 X, Y and Z represent some integers.
-The pattern `(Symbol?)X.Y.Z` includes all of
 
-- `§1.1`
-- `3.1.`
-- `6.2`
-- `§8.`
+- Example: `(Symbol?)X.Y.Z`
+    - hit
+        - `§1.1`
+        - `3.1.`
+        - `6.2.0`
+    - not hit
+        - `§1.`
+        - `5.`
+        - `§10`
 
 ## Repeat
 
