@@ -52,9 +52,13 @@ class Formatter:
         return lines + Text_Lines([Text_Line(text="", idx=idx_largest + 1)])
 
     def _kill_map_exp(self, lines: Text_Lines) -> Text_Lines:
-        pat: Pattern = regex.compile(":\\s+")
+        """kill yaml map expressions."""
+        pat_colon: Pattern = regex.compile(":+\\s+")
+        # delete trailing colons
+        pat_trailing_colon: Pattern = regex.compile(":+\\s*(?P<page>\\d+)$")
         for line in lines:
-            line.text = regex.sub(pat, ":", line.text)
+            line.text = regex.sub(pat_trailing_colon, lambda m: f" {m.group('page')}", line.text)
+            line.text = regex.sub(pat_colon, ":", line.text)
         return lines
 
     def _move_leading_asterisk(self, lines: Text_Lines) -> Text_Lines:
